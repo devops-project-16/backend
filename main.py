@@ -1,7 +1,8 @@
 from fastapi import FastAPI
-from typing import List, Dict
+from typing import List
 import json
 from pydantic import BaseModel
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
@@ -17,18 +18,20 @@ class Item(BaseModel):
     end_date: str
 
 # Define endpoints
-@app.get("/projects", response_model=List[Item])
+@app.get("/api/projects", response_model=List[Item])
 async def get_projects():
     return data['projects']
 
-@app.get("/education", response_model=List[Item])
+@app.get("/api/education", response_model=List[Item])
 async def get_education():
     return data['education']
 
-@app.get("/certificates", response_model=List[Item])
+@app.get("/api/certificates", response_model=List[Item])
 async def get_certificates():
     return data['certificates']
 
-@app.get("/work_experience", response_model=List[Item])
+@app.get("/api/work-experience", response_model=List[Item])
 async def get_work_experience():
     return data['work_experience']
+
+app.mount("/", StaticFiles(directory="../frontend", html=True), name="ui")
