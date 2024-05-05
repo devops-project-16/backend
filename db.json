@@ -1,0 +1,59 @@
+{
+    "projects": [
+      {
+        "title": "E-commerce Website Development",
+        "description": "Developed a full-stack e-commerce website using React.js for the frontend and Node.js with Express.js for the backend. Integrated payment gateway and implemented user authentication.",
+        "start_date": "2022-03-15",
+        "end_date": "2022-08-30"
+      },
+      {
+        "title": "Mobile App Development",
+        "description": "Designed and developed a cross-platform mobile application using Flutter framework. Implemented features such as user authentication, push notifications, and real-time chat functionality.",
+        "start_date": "2022-09-01",
+        "end_date": "2022-12-31"
+      },
+      {
+        "title": "Data Analysis Project",
+        "description": "Conducted data analysis on a large dataset using Python and Pandas library. Applied various statistical techniques and visualized the results using Matplotlib and Seaborn.",
+        "start_date": "2023-01-10",
+        "end_date": "2023-05-20"
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's Degree in Computer Science",
+        "description": "Studied Computer Science at National University. Courses included algorithms, data structures, software engineering, and web development.",
+        "start_date": "2018-09-01",
+        "end_date": "2022-06-30"
+      }
+    ],
+    "certificates": [
+      {
+        "title": "AWS Certified Solutions Architect - Associate",
+        "description": "Earned AWS Certified Solutions Architect - Associate certification after completing a comprehensive training program and passing the certification exam.",
+        "start_date": "2022-02-01",
+        "end_date": "2022-02-28"
+      },
+      {
+        "title": "Google IT Support Professional Certificate",
+        "description": "Completed the Google IT Support Professional Certificate program offered by Coursera. Learned foundational IT skills including troubleshooting, customer service, networking, and system administration.",
+        "start_date": "2021-07-01",
+        "end_date": "2021-12-31"
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Software Engineer Intern",
+        "description": "Interned as a Software Engineer at Company ABC. Developed and maintained web applications, participated in code reviews, and contributed to software design discussions.",
+        "start_date": "2021-06-01",
+        "end_date": "2021-12-31"
+      },
+      {
+        "title": "Software Engineer",
+        "description": "Currently working as a Software Engineer at Company XYZ. Responsible for developing new features, fixing bugs, and optimizing performance of web applications.",
+        "start_date": "2022-01-01",
+        "end_date": "present"
+      }
+    ]
+  }
+  
