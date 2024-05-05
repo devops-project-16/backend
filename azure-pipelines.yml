@@ -28,7 +28,7 @@ steps:
 
 - script: |
     cd $(Build.SourcesDirectory)/backend
-    pip install pytest
+    pip install -r requirements.txt
     pytest
   displayName: "Running pytest unit tests"
   continueOnError: False
