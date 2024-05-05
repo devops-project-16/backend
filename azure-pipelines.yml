@@ -37,14 +37,3 @@ steps:
     pytest
   displayName: "Running pytest for unit tests"
   continueOnError: False
-
-- script: |
-    ls $(Build.SourcesDirectory)
-    ls $(Build.SourcesDirectory)/backend
-  displayName: 'List  current dir'
-
-- script: |
-    cd $(Build.SourcesDirectory)/backend
-    source .venv/bin/activate
-    fastapi dev main.py
-  displayName: "Running fastapi"
