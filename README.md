@@ -7,7 +7,11 @@ git clone https://github.com/devops-project-16/frontend
 ```
 pip install -r requirements.txt
 ```
-5) Run the application.
+4) Test the application.
+```
+pytest
+```
+6) Run the application.
 ```
 fastapi dev main.py
 ```
