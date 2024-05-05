@@ -1,0 +1,41 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+resources:
+  repositories:
+  - repository: backend
+    type: github
+    endpoint: MyGitHubServiceConnection
+    name: devops-project-16/backend
+    trigger:
+    - main
+
+  - repository: frontend
+    type: github
+    endpoint: MyGitHubServiceConnection
+    name: devops-project-16/frontend
+    trigger: 
+    - main
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- checkout: self
+- checkout: backend
+- checkout: frontend
+
+- script: |
+    cd $(Build.SourcesDirectory)/backend
+    pip install pytest
+    pytest
+  displayName: "Running pytest unit tests"
+  continueOnError: False
+
+- script: dir $(Build.SourcesDirectory)
+  displayName: 'List  current dir'
