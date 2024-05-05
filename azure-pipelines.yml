@@ -37,3 +37,10 @@ steps:
     pytest
   displayName: "Running pytest for unit tests"
   continueOnError: False
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'MyContainerRegistryConnection'
+    repository: 'ahmedmahmood19/devopsprojectcontainer'
+    command: 'buildAndPush'
+    Dockerfile: '$(Build.SourcesDirectory)/backend/Dockerfile'
