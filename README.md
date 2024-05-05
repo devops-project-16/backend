@@ -3,6 +3,10 @@ Follow the instructions to setup, and run the application.
 ```
 git clone https://github.com/devops-project-16/frontend
 ```
+2) Create a virtual enviorment.
+```
+python -m venv .venv
+```
 3) Install the necessary dependencies.
 ```
 pip install -r requirements.txt
@@ -11,7 +15,7 @@ pip install -r requirements.txt
 ```
 pytest
 ```
-6) Run the application.
+5) Run the application.
 ```
 fastapi dev main.py
 ```
