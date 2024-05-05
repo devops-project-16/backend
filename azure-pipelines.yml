@@ -1,8 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 resources:
   repositories:
   - repository: backend
@@ -26,11 +21,18 @@ steps:
 - checkout: backend
 - checkout: frontend
 
+- script: mv $(Build.SourcesDirectory)/frontend $(Build.SourcesDirectory)/backend/
+  displayName: "Move frontend folder into backend"
+
 - script: |
     cd $(Build.SourcesDirectory)/backend
+    python -m venv .venv
+    .venv\Scripts\Activate.ps1
     pip install -r requirements.txt
-    pytest
-  displayName: "Running pytest unit tests"
+  displayName: "Creating venv, Activating venv, Installing requirements"
+
+- script: pytest
+  displayName: "Install Running pytest unit tests"
   continueOnError: False
 
 - script: dir $(Build.SourcesDirectory)
