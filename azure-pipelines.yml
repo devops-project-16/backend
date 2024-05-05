@@ -27,13 +27,15 @@ steps:
 - script: |
     cd $(Build.SourcesDirectory)/backend
     python -m venv .venv
-    .venv\Scripts\Activate.ps1
+    . .venv/Scripts/Activate.ps1
     pip install -r requirements.txt
   displayName: "Creating venv, Activating venv, Installing requirements"
 
 - script: pytest
-  displayName: "Install Running pytest unit tests"
+  displayName: "Running pytest for unit tests"
   continueOnError: False
 
-- script: dir $(Build.SourcesDirectory)
+- script: |
+    dir $(Build.SourcesDirectory)
+    dir $(Build.SourcesDirectory)/backend
   displayName: 'List  current dir'
