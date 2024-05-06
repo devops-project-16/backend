@@ -34,4 +34,5 @@ async def get_certificates():
 async def get_work_experience():
     return data['work_experience']
 
+
 app.mount("/", StaticFiles(directory="frontend", html=True), name="ui")
