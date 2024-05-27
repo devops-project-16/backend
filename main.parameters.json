@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "East US"
+    },
+    "containerRegistryName": {
+      "value": "ProjectContainerRegistry"
+    },
+    "serverFarmName": {
+      "value": "ProjectServicePlan"
+    },
+    "webAppName1": {
+      "value": "Canary"
+    },
+    "webAppName2": {
+      "value": "Early Adopters"
+    },
+    "webAppName3": {
+      "value": "Public"
+    },
+    "containerImageName": {
+      "value": "devopsprojectcontainer"
+    }
+  }
+}
