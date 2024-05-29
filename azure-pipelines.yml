@@ -1,18 +1,17 @@
+trigger:
+- main
+
 resources:
   repositories:
   - repository: backend
     type: github
     endpoint: MyGitHubServiceConnection
     name: devops-project-16/backend
-    trigger:
-    - main
 
   - repository: frontend
     type: github
     endpoint: MyGitHubServiceConnection
     name: devops-project-16/frontend
-    trigger: 
-    - main
 
 pool:
   vmImage: ubuntu-latest
