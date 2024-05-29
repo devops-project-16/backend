@@ -3,25 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "location": {
-      "value": "East US"
-    },
-    "containerRegistryName": {
-      "value": "ProjectContainerRegistry"
+      "value": "centralus"
     },
     "serverFarmName": {
-      "value": "ProjectServicePlan"
+      "value": "ProjectFarm"
     },
     "webAppName1": {
-      "value": "Canary"
-    },
-    "webAppName2": {
-      "value": "Early Adopters"
-    },
-    "webAppName3": {
-      "value": "Public"
-    },
-    "containerImageName": {
-      "value": "devopsprojectcontainer"
+      "value": "Devops-Project-WebApp"
     }
   }
 }
